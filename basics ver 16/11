@@ -1,0 +1,1942 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyM5n3gXfeIX8hfXpLyPts+S",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/vishalimankina/vishalimankina/blob/main/basics%20ver%2016/11\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "###examples day 17####\n",
+        "\n",
+        "#Example: Creating a list of numbers\n",
+        "numbers = [1, 2, 3, 4, 5]\n",
+        "\n",
+        "# Creating a list of strings\n",
+        "fruits = [\"apple\", \"banana\", \"orange\"]\n",
+        "\n",
+        "# Creating a mixed-type list\n",
+        "mixed_list = [1, \"apple\", True, 3.14]\n",
+        "\n",
+        "# Example: Accessing elements in a list\n",
+        "fruits = [\"apple\", \"banana\", \"orange\"]\n",
+        "\n",
+        "print(fruits[0])  # Output: \"apple\"\n",
+        "print(fruits[2])  # Output: \"orange\"\n",
+        "\n",
+        "# Example: Modifying elements in a list\n",
+        "fruits = [\"apple\", \"banana\", \"orange\"]\n",
+        "fruits[1] = \"grape\"\n",
+        "print(fruits)  # Output: ['apple', 'grape', 'orange']\n",
+        "\n",
+        "# Example: List operations\n",
+        "list1 = [1, 2, 3]\n",
+        "list2 = [4, 5, 6]\n",
+        "\n",
+        "# Concatenation\n",
+        "result = list1 + list2\n",
+        "print(result)  # Output: [1, 2, 3, 4, 5, 6]\n",
+        "\n",
+        "# Repetition\n",
+        "repeated_list = list1 * 3\n",
+        "print(repeated_list)  # Output: [1, 2, 3, 1, 2, 3, 1, 2, 3]\n",
+        "\n",
+        "\n",
+        "# Example: List methods\n",
+        "fruits = [\"apple\", \"banana\", \"orange\"]\n",
+        "\n",
+        "# Adding elements\n",
+        "fruits.append(\"grape\")\n",
+        "print(fruits)  # Output: ['apple', 'banana', 'orange', 'grape']\n",
+        "\n",
+        "# Removing elements\n",
+        "fruits.remove(\"banana\")\n",
+        "print(fruits)  # Output: ['apple', 'orange', 'grape']\n",
+        "\n",
+        "# Sorting elements\n",
+        "fruits.sort()\n",
+        "print(fruits)  # Output: ['apple', 'grape', 'orange']\n"
+      ],
+      "metadata": {
+        "id": "ZxWWP3s9tvWx"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "###exercise code day###\n",
+        "\n",
+        "#1. Write a Python program that takes a list of numbers [1, 2, 3, 4, 5] and prints each number on a new line.\n",
+        "numbers =[1,2,3,4,5]\n",
+        "for num in numbers:\n",
+        "  print(num)\n",
+        "\n",
+        "\n",
+        "#Given a list of strings [\"apple\", \"banana\", \"orange\"], concatenate all the strings together with a space in between and print the result.\n",
+        "fruits =[\"apple\", \"banana\", \"orange\"]\n",
+        "result =\",\".join(fruits)\n",
+        "print(result)\n",
+        "\n",
+        "\n",
+        "#Write a Python function that takes a list of numbers as input and returns the sum of all the numbers.\n",
+        "numbers=[1,2,3,4,5]\n",
+        "sum_of_numbers=0\n",
+        "for num in numbers:\n",
+        "  sum_of_numbers += num\n",
+        "  num+=1\n",
+        "print(sum_of_numbers)\n",
+        "\n",
+        "\n",
+        "#Given a list of numbers [10, 20, 30, 40, 50],\n",
+        "#find the maximum number using the max() function and print the result.\n",
+        "lists =(10,20,30,40,50)\n",
+        "for num in lists:\n",
+        "  num = max(lists)\n",
+        "print(num)\n",
+        "\n",
+        "\n",
+        "#Write a Python program that takes a list of names [\"Alice\", \"Bob\", \"Charlie\"]\n",
+        "#and checks if a given name (e.g., \"Alice\") is present in the list.\n",
+        "#Print \"Name found\" if the name is in the list;\n",
+        "#otherwise, print \"Name not found\".\n",
+        "Names =[\"Alice\", \"Bob\", \"Charlie\"]\n",
+        "for Name in Names:\n",
+        "  if Name == \"Alice\":\n",
+        "    print(\"Name found\")\n",
+        "    break\n",
+        "  else:\n",
+        "    print(\"Not found\")\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1npYZfkrk1qM",
+        "outputId": "fd5b803a-b9b0-48c5-da06-ccd8ba43d716"
+      },
+      "execution_count": 47,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "5\n",
+            "apple,banana,orange\n",
+            "15\n",
+            "50\n",
+            "Name found\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#### examples day18 , practice codes are added in this section###\n",
+        "# Example: Creating a tuple\n",
+        "fruits = (\"apple\", \"banana\", \"orange\")\n",
+        "coordinates = (3.14, 2.71)\n",
+        "\n",
+        "# Example: Accessing elements in a tuple\n",
+        "fruits = (\"apple\", \"banana\", \"orange\")\n",
+        "\n",
+        "print(fruits[0])  # Output: \"apple\"\n",
+        "print(fruits[2])  # Output: \"orange\"\n",
+        "\n",
+        "# Example: Tuple functions\n",
+        "numbers = (5, 2, 8, 1, 7)\n",
+        "\n",
+        "# Length of the tuple\n",
+        "length = len(numbers)\n",
+        "print(length)  # Output: 5\n",
+        "\n",
+        "# Maximum and minimum elements in the tuple\n",
+        "maximum = max(numbers)\n",
+        "minimum = min(numbers)\n",
+        "print(maximum, minimum)  # Output: 8 1\n",
+        "\n",
+        "# Example: Tuple concatenation and repetition\n",
+        "tuple1 = (1, 2, 3)\n",
+        "tuple2 = (4, 5, 6)\n",
+        "\n",
+        "# Concatenation\n",
+        "result = tuple1 + tuple2\n",
+        "print(result)  # Output: (1, 2, 3, 4, 5, 6)\n",
+        "\n",
+        "# Repetition\n",
+        "repeated_tuple = tuple1 * 3\n",
+        "print(repeated_tuple)  # Output: (1, 2, 3, 1, 2, 3, 1, 2, 3)\n",
+        "\n",
+        "\n",
+        "###practice code###\n",
+        "# Create a tuple containing three elements: 'apple', 5, and True.\n",
+        "\n",
+        "tuples = (\"apple,5,true\")\n",
+        "print(tuples)\n",
+        "\n",
+        "# Access the second element from the given tuple:\n",
+        "# ('cat', 'dog', 'bird', 'fish').\n",
+        "\n",
+        "lists =('cat', 'dog', 'bird', 'fish')\n",
+        "result = lists[1]\n",
+        "print(result)\n",
+        "\n",
+        "#Concatenate two tuples: (1, 2, 3) and ('a', 'b', 'c').\n",
+        "\n",
+        "list1 = (1, 2, 3)\n",
+        "list2 = ('a', 'b', 'c')\n",
+        "result = list1 +list2\n",
+        "print(result)\n",
+        "\n",
+        "#find the length of the tuple: (10, 20, 30, 40, 50).\n",
+        "lists =(10, 20, 30, 40, 50)\n",
+        "result = len(lists)\n",
+        "print(result)\n",
+        "\n",
+        "#Check if the element 25 exists in the tuple: (10, 20, 30, 40, 50).\n",
+        "lists =(10, 20, 30, 40, 50)\n",
+        "if 25 in lists:\n",
+        "  print(\"found\")\n",
+        "else:\n",
+        "  print(\"not found\")\n",
+        "\n",
+        "#Create a new tuple with elements from the given\n",
+        "#tuple (3, 6, 9) repeated 3 times.\n",
+        "\n",
+        "tuple= (3, 6, 9)\n",
+        "repeat_tuple = tuple*3\n",
+        "print(repeat_tuple)\n",
+        "\n",
+        "#Perform packing and unpacking on a tuple containing the names of three fruits:\n",
+        "#'apple', 'banana', and 'orange'.\n",
+        "#Use unpacking to assign each fruit to three variables:\n",
+        "#fruit1, fruit2, and fruit3.\n",
+        "\n",
+        "tuple = ('apple', 'banana', 'orange')\n",
+        "fruit1,fruit2,fruit3 = tuple\n",
+        "print(\"Fruit 1:\", fruit1)\n",
+        "print(\"Fruit 2:\", fruit2)\n",
+        "print(\"Fruit 3:\", fruit3)\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Val1yroJqeMk",
+        "outputId": "db6eda9c-86f4-4ff1-cb32-2e1263fc9cdd"
+      },
+      "execution_count": 55,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "apple\n",
+            "orange\n",
+            "5\n",
+            "8 1\n",
+            "(1, 2, 3, 4, 5, 6)\n",
+            "(1, 2, 3, 1, 2, 3, 1, 2, 3)\n",
+            "apple,5,true\n",
+            "dog\n",
+            "(1, 2, 3, 'a', 'b', 'c')\n",
+            "5\n",
+            "not found\n",
+            "(3, 6, 9, 3, 6, 9, 3, 6, 9)\n",
+            "Fruit 1: apple\n",
+            "Fruit 2: banana\n",
+            "Fruit 3: orange\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "EILTJoQArdUv"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Given a list of numbers [1, 2, 3, 4, 5], use a for loop to print the elements one by one.\n",
+        "# However, if the element is 3, skip it using the continue statement.\n",
+        "#Note: Mowa nuv ee problem lo list ni create cheyyali ante my_list = [1,2,3,4,5] ani raayi,\n",
+        "my_list =[1,2,3,4,5]\n",
+        "for num in my_list:\n",
+        "  if num == 3:\n",
+        "    continue\n",
+        "  print(num)\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "E5MHil4ld3u_",
+        "outputId": "baaf49ec-4ded-4fd3-bfbe-cebbeae4e618"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "2\n",
+            "4\n",
+            "5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Write a Python function that takes a string as input and checks if it contains the letter 'o'.\n",
+        "#If it does, print \"Found 'o'\" and use the break statement to stop searching.\n",
+        "\n",
+        "input_str = \"Hello,world!\"\n",
+        "for char in input_str:\n",
+        "  if char == \"o\":\n",
+        "    break\n",
+        "  print (\"found o\")\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "9aOKcvFIg1mc"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def find_letter_o(input_string):\n",
+        "    for char in input_string:\n",
+        "        if char == 'o':\n",
+        "            print(\"Found 'o'\")\n",
+        "            break\n",
+        "\n",
+        "# Example usage:\n",
+        "input_str = \"Hello World\"\n",
+        "find_letter_o(input_str)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nCGa9Likh8dA",
+        "outputId": "291258db-288c-4bb3-b56d-dfb740b53e93"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Found 'o'\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Given a list of numbers [1, 2, 3, 4, 5], use a for loop to double each element and print the result.\n",
+        "#However, if the element is 4, use the continue statement to skip it.\n",
+        "\n",
+        "my_list =[1,2,3,4,5]\n",
+        "for num in my_list:\n",
+        "  num = num*2\n",
+        "  if num == 4:\n",
+        "    continue\n",
+        "  print(num)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yWs93LBjulMN",
+        "outputId": "eecc0b87-3c33-40ce-f1f9-d17a200749bb"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2\n",
+            "6\n",
+            "8\n",
+            "10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Write a Python program to print all numbers from 1 to 20 using a while loop.\n",
+        "#However, stop the loop when reaching 15 using the break statement.\n",
+        "num = 1\n",
+        "while num <=20:\n",
+        "  print(num)\n",
+        "  if num == 15:\n",
+        "    break\n",
+        "  num += 1\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "23l0mHBYwq09"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#### Comparing Strings in Python\n",
+        "#Ante Strings ni compare cheyyadam mowa!\n",
+        "#Equality and Inequality Comparison (`==`, `!=`):\n",
+        "# Example: Equality and inequality comparison\n",
+        "string1 = \"hello\"\n",
+        "string2 = \"Hello\"\n",
+        "\n",
+        "if string1 == string2:\n",
+        "    print(\"Both strings are equal.\")\n",
+        "else:\n",
+        "    print(\"The strings are not equal.\")\n",
+        "\n",
+        "if string1 != string2:\n",
+        "    print(\"The strings are not equal.\")\n",
+        "else:\n",
+        "    print(\"Both strings are equal.\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fXVBnwWfQYhR",
+        "outputId": "3a018843-5f58-4a26-83ee-16edc0687c1b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The strings are not equal.\n",
+            "The strings are not equal.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Lexicographical order ante dictionaries lo ela order lo words untayo atla!\n",
+        "# Example: Lexicographical comparison\n",
+        "string1 = \"apple\"\n",
+        "string2 = \"banana\"\n",
+        "\n",
+        "if string1 < string2:\n",
+        "    print(\"string1 comes before string2.\")\n",
+        "else:\n",
+        "    print(\"string1 comes after or is equal to string2.\")\n",
+        "\n",
+        "if string1 <= string2:\n",
+        "    print(\"string1 comes before or is equal to string2.\")\n",
+        "else:\n",
+        "    print(\"string1 comes after string2.\")\n",
+        "\n",
+        "if string1 > string2:\n",
+        "    print(\"string1 comes after string2.\")\n",
+        "else:\n",
+        "    print(\"string1 comes before or is equal to string2.\")\n",
+        "\n",
+        "if string1 >= string2:\n",
+        "    print(\"string1 comes after or is equal to string2.\")\n",
+        "else:\n",
+        "    print(\"string1 comes before string2.\")\n"
+      ],
+      "metadata": {
+        "id": "GYNClDMtQ2Ra"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "string1 = \"python\"\n",
+        "string2 = \"Python\"\n",
+        "\n",
+        "if string1 == string2:\n",
+        "    print(\"Both strings are equal.\")\n",
+        "else:\n",
+        "    print(\"The strings are not equal.\")\n",
+        "\n",
+        "if string1 != string2:\n",
+        "    print(\"The strings are not equal.\")\n",
+        "else:\n",
+        "    print(\"Both strings are equal.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "E1bMR66_RKgL",
+        "outputId": "14b0a2b1-d1ce-4705-dd79-05be468f79fa"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The strings are not equal.\n",
+            "The strings are not equal.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Write a Python function that takes a string as input and checks if it is an empty string using the equality operator (==).\n",
+        "\n",
+        "string =\"\"\n",
+        "if string == \"\":\n",
+        "  print(\"true\")\n",
+        "else:\n",
+        "  print(false)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8H0VJEp7Rg35",
+        "outputId": "f105f546-1349-4bcb-c1db-08fbd74e049e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "true\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Eu1kPkun2mUX",
+        "outputId": "8f2a1e12-48fe-4747-f42a-9f6487d6fa38"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "You are an adult.\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Example 1: Using 'if' to check a condition\n",
+        "age = 18\n",
+        "\n",
+        "if age >= 18:\n",
+        "    print(\"You are an adult.\")\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for num in range(1,6):\n",
+        "  print(num)\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "jeqfcpqGCDtm",
+        "outputId": "7f733c77-192c-446d-abed-b00bc5e63798"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Use a for loop to calculate the sum of numbers from 1 to 10.\n",
+        "\n",
+        "sum_of_numbers=0\n",
+        "\n",
+        "for num in range (1,12):\n",
+        "  sum_of_numbers+=num\n",
+        "  num+=1\n",
+        "print(\"sum of numbers from 1 to n:\",sum_of_numbers)\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qLLlhW4VCj1q",
+        "outputId": "5a9ef853-ef11-4297-c191-a73af75c1438"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "sum of numbers from 1 to n: 66\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Write a for loop to print each character in the string \"Hello\".\n",
+        "for character in (\"Hello\"):\n",
+        "  print(character)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "SRNcKSu9mHR7",
+        "outputId": "5689776b-75f7-482b-96ed-dbc9f23f18d6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "H\n",
+            "e\n",
+            "l\n",
+            "l\n",
+            "o\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Write a for loop to print the first 10 even numbers.\n",
+        "\n",
+        "for num in range(2,20,2):\n",
+        "  print(num)\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Q6m6gaVDnIvP",
+        "outputId": "48ba6cc5-6046-4da7-c968-fba7914c7751"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2\n",
+            "4\n",
+            "6\n",
+            "8\n",
+            "10\n",
+            "12\n",
+            "14\n",
+            "16\n",
+            "18\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Create a for loop that doubles each number in the sequence: 1, 2, 3, 4, 5.\n",
+        "num = [1,2,3,4,5]\n",
+        "\n",
+        "for num in num:\n",
+        "  double_num = num* 2\n",
+        "  print (double_num)\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "XyMsCcKaosyl",
+        "outputId": "849dc9d7-9618-44c9-960a-dc502da16ea4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2\n",
+            "4\n",
+            "6\n",
+            "8\n",
+            "10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#len(): Returns the length of the string.\n",
+        "string = \"Hello, World!\"\n",
+        "length = len(string)\n",
+        "print(length)  # Output: 13\n",
+        "\n",
+        "#upper(): Converts all characters in the string to uppercase.\n",
+        "string = \"Hello, World!\"\n",
+        "upper_case = string.upper()\n",
+        "print(upper_case)  # Output: HELLO, WORLD!\n",
+        "\n",
+        "#lower(): Converts all characters in the string to lowercase.\n",
+        "string = \"Hello, World!\"\n",
+        "lower_case = string.lower()\n",
+        "print(lower_case)  # Output: hello, world!\n",
+        "\n",
+        "#strip(): Removes leading and trailing whitespaces from the string.\n",
+        "string = \"   Hello, World!   \"\n",
+        "stripped_string = string.strip()\n",
+        "print(stripped_string)  # Output: \"Hello, World!\"\n",
+        "\n",
+        "\n",
+        "\n",
+        "#`replace()`: Replaces occurrences of a substring with another substring.\n",
+        "string = \"Hello, World!\"\n",
+        "new_string = string.replace(\"Hello\", \"Hi\")\n",
+        "print(new_string)  # Output: \"Hi, World!\"\n",
+        "\n",
+        "\n",
+        "#split()`: Splits the string into a list of substrings based on a delimiter.\n",
+        "string = \"apple,orange,banana\"\n",
+        "fruits = string.split(\",\")\n",
+        "print(fruits)  # Output: ['apple', 'orange', 'banana']\n",
+        "\n",
+        "\n",
+        "#startswith()`: Checks if the string starts with a specific prefix.\n",
+        "string = \"Hello, World!\"\n",
+        "result = string.startswith(\"Hello\")\n",
+        "print(result)  # Output: True\n",
+        "\n",
+        "\n",
+        "#endswith()`: Checks if the string ends with a specific suffix.\n",
+        "string = \"Hello, World!\"\n",
+        "result = string.endswith(\"World!\")\n",
+        "print(result)  # Output: True\n",
+        "\n",
+        "\n",
+        "#count(): Returns the number of occurrences of a substring in the string.\n",
+        "string = \"Hello, World!\"\n",
+        "count = string.count(\"l\")\n",
+        "print(count)  # Output: 3\n",
+        "\n",
+        "#find(): Returns the index of the first occurrence of a substring. If not found, returns -1.\n",
+        "string = \"Hello, World!\"\n",
+        "index = string.find(\"o\")\n",
+        "print(index)  # Output: 4\n",
+        "\n",
+        "#isdigit(): Checks if all characters in the string are digits.\n",
+        "string = \"1d234\"\n",
+        "result = string.isdigit()\n",
+        "print(result)  # Output: True\n",
+        "\n",
+        "\n",
+        "#isalpha(): Checks if all characters in the string are alphabetic.\n",
+        "string = \"H0llo\"\n",
+        "result = string.isalpha()\n",
+        "print(result)  # Output: True\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5DoE0ODwrd6X",
+        "outputId": "4d39bbc3-e65d-4263-ce9e-e8ad7c9d4847"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "13\n",
+            "HELLO, WORLD!\n",
+            "hello, world!\n",
+            "Hello, World!\n",
+            "Hi, World!\n",
+            "['apple', 'orange', 'banana']\n",
+            "True\n",
+            "True\n",
+            "3\n",
+            "4\n",
+            "False\n",
+            "False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#day 13\n",
+        "\n",
+        "#Write a Python program that takes a user input string and converts it to lowercase using the lower() method.\n",
+        "\n",
+        "\n",
+        "string = \"HEllo my name is Vishali\"\n",
+        "lower_case = string.lower()\n",
+        "print(lower_case)\n",
+        "\n",
+        "#Given a string , find its length using the len() method.\n",
+        "\n",
+        "string = \"hello,world!\"\n",
+        "length = len(string)\n",
+        "print(length)\n",
+        "\n",
+        "\n",
+        "#write a Python function that takes a string as input and converts it to uppercase using the upper() method.\n",
+        "\n",
+        "string =\"hello,chinnu\"\n",
+        "upper_case = string.upper()\n",
+        "print(upper_case)\n",
+        "\n",
+        "#Given a string \"Hello123\", check if it contains only alphabetic characters using the isalpha() method.\n",
+        "string =\"h2llo\"\n",
+        "result = string.isalpha()\n",
+        "print(result)\n",
+        "\n",
+        "#Write a Python program that takes a user input string with leading and trailing whitespaces and removes them using the strip() method.\n",
+        "string = \"  python,programming!  \"\n",
+        "result = string.strip()\n",
+        "print(result)\n",
+        "\n",
+        "#Given a string \"I love Python programming\", split it into words using the split() method and print each word on a new line.\n",
+        "string = \"I love python programming\"\n",
+        "result = string.split()\n",
+        "print(result)\n",
+        "\n",
+        "#Write a Python program that takes a user input string and replaces all occurrences of \"Python\" with \"Java\" using the replace() method.\n",
+        "#Input: \"I love Python programming, Python is great.\"\n",
+        "\n",
+        "string =\"I love Python programming, Python is great.\"\n",
+        "new_string = string.replace(\"Python\",\"Matlab\")\n",
+        "print(new_string)\n",
+        "\n",
+        "\n",
+        "#Given a string, check if it starts with the word \"Hello\" using the startswith() method.emdswith()\n",
+        "\n",
+        "string = \"my,name!\"\n",
+        "result1 = string.startswith(\"my\")\n",
+        "print(result1)\n",
+        "result2 = string.endswith(\"name!\")\n",
+        "print(result2)\n",
+        "\n",
+        "\n",
+        "#Given a string \"banana\", count the occurrences of the letter \"a\" using the count() method.\n",
+        "#Input: \"banana\"\n",
+        "\n",
+        "string = \"banana\"\n",
+        "result=string.count(\"a\")\n",
+        "print(result)\n",
+        "\n",
+        "#Write a Python program that takes a user input string and finds the index of the first occurrence of the letter \"l\" using the find() method.\n",
+        "string = \"my,name!\"\n",
+        "result = string.find(\"m\")\n",
+        "print(result)\n",
+        "\n",
+        "#Given a string \"12345\", check if it consists of only digits using the isdigit() method.\n",
+        "#Input: \"1234\n",
+        "string = \"12345e\"\n",
+        "result=string.isdigit()\n",
+        "print(result)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4nEQcvSctI5A",
+        "outputId": "e973001d-de45-4130-c058-1862cdc3f4aa"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "hello my name is vishali\n",
+            "12\n",
+            "HELLO,CHINNU\n",
+            "False\n",
+            "python,programming!\n",
+            "['I', 'love', 'python', 'programming']\n",
+            "I love Matlab programming, Matlab is great.\n",
+            "True\n",
+            "True\n",
+            "3\n",
+            "0\n",
+            "False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#DAY14\n",
+        "\n",
+        "\n",
+        "# Example: Print a 3x3 rectangular pattern using nested loops\n",
+        "for i in range(3):\n",
+        "    for j in range(3):\n",
+        "        print(\"*\", end=\" \")\n",
+        "    print()  # Move to the next line after each row\n",
+        "\n",
+        "\n",
+        "# Example: Print a right-angled triangle pattern using nested loops\n",
+        "n = 5\n",
+        "\n",
+        "for i in range(1, n + 1):\n",
+        "    for j in range(i):\n",
+        "        print(\"*\", end=\" \")\n",
+        "    print()  # Move to the next line after each row\n",
+        "\n",
+        "\n",
+        "#Write a nested loop that prints a square pattern of stars (asterisks))\n",
+        "size =6\n",
+        "for i in range (size):\n",
+        "  for j in range(size):\n",
+        "    print(\"* \",end =\"\")\n",
+        "  print()\n",
+        "\n",
+        "\n",
+        "\n",
+        "#Create a nested loop to print the multiplication table from 1 to 5 (up to 10 times each).\n",
+        "size =5\n",
+        "for i in range (1,6):\n",
+        "  for j in range(1,6):\n",
+        "    result = i *j\n",
+        "    print(f\"{result:2}\", end=\" \")\n",
+        "  print()\n",
+        "\n",
+        "\n",
+        "#Write a nested loop to print a right-angled triangle of numbers in ascending order.\n",
+        "n =5\n",
+        "for i in range (1,n+1):\n",
+        "  for j in  range(1,i+1):\n",
+        "    print(j,end=\"\")\n",
+        "  print()\n",
+        "\n",
+        "\n",
+        "#Create a nested loop that prints a hollow square pattern of stars (asterisks).\n",
+        "size= 5\n",
+        "for i in range (size):\n",
+        "  for j in range (size):\n",
+        "    if i == 0 or i == size - 1 or j == 0 or j == size - 1:\n",
+        "      print(\"*\", end=\" \")\n",
+        "    else:\n",
+        "      print(\" \", end=\" \")\n",
+        "  print()\n",
+        "\n",
+        "#Write a nested loop to calculate and print the sum of numbers from 1 to 5 using nested iteration.\n",
+        "sum_result = 0\n",
+        "\n",
+        "for i in range(1, 6):\n",
+        "    for j in range(1, i + 1):\n",
+        "        sum_result += j\n",
+        "\n",
+        "print(\"Expected Output:\", sum_result)\n",
+        "\n",
+        "#Create a nested loop to print the reverse of the multiplication table from 1 to 5 (up to 10 times each).\n",
+        "for i in range(5, 0, -1):\n",
+        "    for j in range(1, 6):\n",
+        "        result = i * j\n",
+        "        print(f\"{result:2}\", end=\" \")\n",
+        "    print()\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qgZJhytSwhay",
+        "outputId": "a86cc4ef-8ac4-45a9-b009-886df02a64c0"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "* * * \n",
+            "* * * \n",
+            "* * * \n",
+            "* \n",
+            "* * \n",
+            "* * * \n",
+            "* * * * \n",
+            "* * * * * \n",
+            "* * * * * * \n",
+            "* * * * * * \n",
+            "* * * * * * \n",
+            "* * * * * * \n",
+            "* * * * * * \n",
+            "* * * * * * \n",
+            " 1  2  3  4  5 \n",
+            " 2  4  6  8 10 \n",
+            " 3  6  9 12 15 \n",
+            " 4  8 12 16 20 \n",
+            " 5 10 15 20 25 \n",
+            "1\n",
+            "12\n",
+            "123\n",
+            "1234\n",
+            "12345\n",
+            "* * * * * \n",
+            "*       * \n",
+            "*       * \n",
+            "*       * \n",
+            "* * * * * \n",
+            "Expected Output: 55\n",
+            " 5 10 15 20 25 \n",
+            " 4  8 12 16 20 \n",
+            " 3  6  9 12 15 \n",
+            " 2  4  6  8 10 \n",
+            " 1  2  3  4  5 \n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num=1\n",
+        "\n",
+        "\n",
+        "while num<=10:\n",
+        "  print(num)\n",
+        "\n",
+        "\n",
+        "  num+=1\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "bqDE_kioHtM0",
+        "outputId": "dd8dde84-4e66-4919-8573-f9161362f7c1"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "5\n",
+            "6\n",
+            "7\n",
+            "8\n",
+            "9\n",
+            "10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num=1\n",
+        "n=float(input(\"enter the number:\"))\n",
+        "sum_of_numbers = 0\n",
+        "\n",
+        "while num <= n:\n",
+        "  sum_of_numbers+=num\n",
+        "  num+=1\n",
+        "\n",
+        "print(\"sum of numbers from 1 to n:\",sum_of_numbers)\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2EJc3cvrIPGx",
+        "outputId": "1bf5eae5-3c58-4789-9c23-6d5f93a1d3e9"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the number:5\n",
+            "sum of numbers from 1 to n: 15\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num = 2\n",
+        "\n",
+        "while num <= 30:\n",
+        "  print(num)\n",
+        "  num+=2\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "sWvRd0aaKmMD",
+        "outputId": "d045aae8-7e95-4e73-bb59-1db8e25b0652"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2\n",
+            "4\n",
+            "6\n",
+            "8\n",
+            "10\n",
+            "12\n",
+            "14\n",
+            "16\n",
+            "18\n",
+            "20\n",
+            "22\n",
+            "24\n",
+            "26\n",
+            "28\n",
+            "30\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num=10\n",
+        "while num >= -4:\n",
+        "  print(num)\n",
+        "  num -= 5\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "bRjp9awpMUsP",
+        "outputId": "bd6e386f-955d-4634-f46a-2594b61efba8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "10\n",
+            "5\n",
+            "0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Initialize a variable to store the user input\n",
+        "user_input = 0\n",
+        "\n",
+        "# Use a while loop to keep prompting the user for a number until they enter a negative number\n",
+        "while user_input >= 0:\n",
+        "    user_input = int(input(\"Enter a number: \"))\n",
+        "    if user_input >= 0:\n",
+        "        print(\"You entered:\", user_input)\n",
+        "    else:\n",
+        "        print(\"You entered a negative number. Exiting the loop.\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-egw0XLqNRYR",
+        "outputId": "ea6dd96b-a526-4042-90b8-77e1e2ab964e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 10\n",
+            "You entered: 10\n",
+            "Enter a number: 11\n",
+            "You entered: 11\n",
+            "Enter a number: 7\n",
+            "You entered: 7\n",
+            "Enter a number: -2\n",
+            "You entered a negative number. Exiting the loop.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num=10\n",
+        "\n",
+        "while num >=1:\n",
+        "  print(num)\n",
+        "  num -=1\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "MqXrd5ldNjCD",
+        "outputId": "ce493e16-5621-4e0c-b9f3-1f18d24c56eb"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "10\n",
+            "9\n",
+            "8\n",
+            "7\n",
+            "6\n",
+            "5\n",
+            "4\n",
+            "3\n",
+            "2\n",
+            "1\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "number = int(input(\"Enter a number to calculate its factorial: \"))\n",
+        "\n",
+        "factorial = 1\n",
+        "while number >0:\n",
+        "   factorial *= number\n",
+        "   number -= 1\n",
+        "\n",
+        "print(\"the factorial is: \", factorial)\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kuSP_tOoURka",
+        "outputId": "a2af1abb-7d40-449e-c88f-a9054f7e2e2a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number to calculate its factorial: 6\n",
+            "the factorial is:  720\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n = int(input(\"Enter the number of terms in the Fabonacci series: \"))\n",
+        "\n",
+        "first_num , second_num = 0, 1\n",
+        "count= 0\n",
+        "print(\"Fibonacci series up to:\", n)\n",
+        "while count < n:\n",
+        "  print(first_num)\n",
+        "  nth_num = first_num + second_num\n",
+        "  first_num = second_num\n",
+        "  second_num = nth_num\n",
+        "  count += 1\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "iZLNpdbbXl1G"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Ask the user for input: the number of terms in the Fibonacci series\n",
+        "n = int(input(\"Enter the number of terms in the Fibonacci series: \"))\n",
+        "\n",
+        "# Initialize the first two Fibonacci numbers\n",
+        "first_num, second_num = 0, 1\n",
+        "\n",
+        "# Counter variable\n",
+        "count = 0\n",
+        "\n",
+        "# Print Fibonacci series up to n terms using a while loop\n",
+        "print(\"Fibonacci series up to\", n, \"terms:\")\n",
+        "while count < n:\n",
+        "    print(first_num)\n",
+        "    nth_num = first_num + second_num\n",
+        "    # Update values for the next iteration\n",
+        "    first_num = second_num\n",
+        "    second_num = nth_num\n",
+        "    count += 1\n"
+      ],
+      "metadata": {
+        "id": "15VJkPiaasDU"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Write a while loop that reads numbers from the user until they enter the number 0. Then, it prints the sum of all the entered numbers.\n",
+        "Expected Input: 3, 5, 2, 0\n",
+        "Expected Output: 10 (3 + 5 + 2)"
+      ],
+      "metadata": {
+        "id": "P1uEdRPiiS71"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "DJwZXMg8iS4s"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "total_sum = 0\n",
+        "while True:\n",
+        "  num= int(input(\"enter a number (enter 0 to stop): \"))\n",
+        "  if num == 0:\n",
+        "    break\n",
+        "  total_sum += num\n",
+        "print(\"sum of entered number:\",total_sum)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xUbpXNV-goTG",
+        "outputId": "c9fbd3e3-0127-4c0e-b0bc-da2d1c0c26e3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter a number (enter 0 to stop): 56\n",
+            "enter a number (enter 0 to stop): 67\n",
+            "enter a number (enter 0 to stop): 9\n",
+            "enter a number (enter 0 to stop): 0\n",
+            "sum of entered number: 132\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Create a while loop that prints the square of numbers from 1 to 5."
+      ],
+      "metadata": {
+        "id": "YYguPgHxiYip"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num = 1\n",
+        "while num <= 5:\n",
+        "  square = num **2\n",
+        "  print(\"the square of num is :\",square)\n",
+        "  num +=1\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "cdyKwc2ziYJP",
+        "outputId": "0301f2f4-bb08-4795-d521-8c02da8359b3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "the square of num is : 1\n",
+            "the square of num is : 4\n",
+            "the square of num is : 9\n",
+            "the square of num is : 16\n",
+            "the square of num is : 25\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Secret number to guess\n",
+        "secret_number = 7\n",
+        "\n",
+        "# Ask the user to guess the number and continue until the correct number is guessed\n",
+        "while True:\n",
+        "    user_guess = int(input(\"Guess the secret number: \"))\n",
+        "    if user_guess == secret_number:\n",
+        "        print(\"Congratulations! You guessed the correct number (7).\")\n",
+        "        break\n",
+        "    else:\n",
+        "        print(\"Wrong guess. Try again.\")\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kUeXV88xPrYh",
+        "outputId": "2760d3dc-f8ae-4652-98be-9cbedfdc95e3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Guess the secret number: 7\n",
+            "Congratulations! You guessed the correct number (7).\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Example 2: Using 'if' and 'else' to check a condition\n",
+        "age = 15\n",
+        "\n",
+        "if age >= 18:\n",
+        "    print(\"You are an adult.\")\n",
+        "else:\n",
+        "    print(\"You are a minor.\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "wlwWCjKu20Ys",
+        "outputId": "7436c078-cf9c-4dea-9d6b-dfd3dda78ef6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "You are a minor.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Example 3: Using 'if', 'elif', and 'else' to check multiple conditions\n",
+        "age = 25\n",
+        "\n",
+        "if age < 18:\n",
+        "    print(\"You are a minor.\")\n",
+        "elif age >= 18 and age < 65:\n",
+        "    print(\"You are an adult.\")\n",
+        "else:\n",
+        "    print(\"You are a senior citizen.\")\n"
+      ],
+      "metadata": {
+        "id": "w6iVYD4J27Tc"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Write a program that takes a number as input and prints \"Even\" if it's an even number, and \"Odd\" if it's an odd number."
+      ],
+      "metadata": {
+        "id": "4BzTlEaK3D5m"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "int = 117\n",
+        "if int % 2 == 0:\n",
+        "    print(\"even\")\n",
+        "else:\n",
+        "    print(\"odd\")\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "09QAXaaK4Quh",
+        "outputId": "09380b90-8aca-45df-eb98-b7974d93ecab"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "odd\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Write a program that takes two numbers as input and prints the larger number.\n",
+        "Expected Input:\n",
+        "Enter the first number: 15\n",
+        "Enter the second number: 22"
+      ],
+      "metadata": {
+        "id": "iBmrZ65D7ERo"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num1 = float(input(\"enter the first number:\"))\n",
+        "num2 =float(input(\"enter the second number:\"))\n",
+        "if num1 > num2:\n",
+        "    print(\"The largest number is:\",num1)\n",
+        "elif num1 < num2:\n",
+        "    print(\"The largest number is:\",num2)\n",
+        "else:\n",
+        "  print(\"both are same \")\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LDD_vkAP7GnN",
+        "outputId": "25377b14-991e-458e-e875-bf9b994d8f55"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the first number:99\n",
+            "enter the second number:25\n",
+            "The largest number is: 99.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Write a program that takes a character as input and prints \"Vowel\" if it's a vowel (a, e, i, o, u), and \"Consonant\" otherwise."
+      ],
+      "metadata": {
+        "id": "pJW72fDI-XOx"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "char = input(\"enter the character:\")\n",
+        "if char in \"a,e,i,o,U\":\n",
+        "  print (\"vowel\")\n",
+        "else :\n",
+        "  print(\"consonant\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-aFxdsP5-fvt",
+        "outputId": "14a4006b-914f-4e81-e8ba-5cf8958e9d38"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the character:m\n",
+            "consonant\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Get input from the user\n",
+        "year = float(input(\"Enter a year: \"))\n",
+        "\n",
+        "# Check if it's a leap year\n",
+        "if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):\n",
+        "    print(\"Leap Year\")\n",
+        "else:\n",
+        "    print(\"Not a Leap Year\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vnysO05iEO_Q",
+        "outputId": "da8545fc-c0b9-4885-d331-2436409d84a1"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a year: 2023\n",
+            "Not a Leap Year\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "grade = input(\"enter the grades: \")\n",
+        "if grade in \"A,B,C,D,E\":\n",
+        "  print(\"pass\")\n",
+        "elif grade in \"F\":\n",
+        "  print(\"fail\")\n",
+        "else :\n",
+        "  print(\"not applicable\")\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "t8--lejqE2PO",
+        "outputId": "4af0aece-02a5-4ac7-c598-87af90f64fb3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the grades: F\n",
+            "fail\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Example 1: Nested 'if' statement\n",
+        "x = 10\n",
+        "\n",
+        "if x > 0:\n",
+        "    print(\"x is positive.\")\n",
+        "    if x % 2 == 0:\n",
+        "        print(\"x is even.\")\n",
+        "    else:\n",
+        "        print(\"x is odd.\")\n",
+        "else:\n",
+        "    print(\"x is not positive.\")\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "MrJnSXPvF1Ya",
+        "outputId": "18a9834e-9e59-4656-eef2-ec8af2b1e046"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "x is positive.\n",
+            "x is even.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Check if a given number num is positive, negative, or zero\n",
+        "x = 0\n",
+        "\n",
+        "if x > 0:\n",
+        "  print (\"x is positive .\")\n",
+        "elif x < 0:\n",
+        "  print(\"x is negative.\")\n",
+        "else:\n",
+        "  print (\"zero\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "mTpiMmS5GFWW",
+        "outputId": "392f302e-43ee-4bc7-ae28-9f356120541e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "zero\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = float(input(\"enter the number: \"))\n",
+        "\n",
+        "if x > 0:\n",
+        "  print(\"x is positive. \")\n",
+        "  if x % 2 == 0:\n",
+        "    print(\"even\")\n",
+        "  else:\n",
+        "    print(\"odd\")\n",
+        "\n",
+        "elif x < 0:\n",
+        "  print(\"x is negative. \")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5Asr0YcvHpBk",
+        "outputId": "efa9e62a-4c0f-4553-f13c-7e4bbd22b784"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the number: 1.8\n",
+            "x is positive. \n",
+            "odd\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "this  is wrong"
+      ],
+      "metadata": {
+        "id": "X3THhfqIR6ow"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#considering the following grade scale: A (90-100), B (80-89), C (70-79), D (60-69), and F (below 60).\n",
+        "numerical_grade = input(\"enter the grade: \")\n",
+        "if numerical_grade == range(90, 100):\n",
+        "  print(\"A\")\n",
+        "elif numerical_grade == range(80, 89):\n",
+        "    print(\"B\")\n",
+        "    if numerical_grade == range(70, 79):\n",
+        "      print(\"C\")\n",
+        "    elif numerical_grade == range(60, 69):\n",
+        "      print(\"D\")\n",
+        "else:\n",
+        "  print(\"F\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kF29YWULJHKA",
+        "outputId": "fec21f1e-a927-45e2-c6c0-c07b6fec0029"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the grade: 79\n",
+            "F\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Get input from the user\n",
+        "numerical_grade = float(input(\"Enter the numerical grade: \"))\n",
+        "\n",
+        "# Determine the letter grade based on the given scale\n",
+        "if numerical_grade >= 90:\n",
+        "    letter_grade = \"A\"\n",
+        "elif numerical_grade >= 80:\n",
+        "    letter_grade = \"B\"\n",
+        "elif numerical_grade >= 70:\n",
+        "    letter_grade = \"C\"\n",
+        "elif numerical_grade >= 60:\n",
+        "    letter_grade = \"D\"\n",
+        "else:\n",
+        "    letter_grade = \"F\"\n",
+        "\n",
+        "# Print the corresponding letter grade\n",
+        "print(f\"The letter grade for {numerical_grade} is: {letter_grade}\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "IaRtui6FRpCa",
+        "outputId": "65110eb9-f0aa-4008-f6c1-d0492e616c2e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the numerical grade: 55\n",
+            "The letter grade for 55.0 is: F\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
